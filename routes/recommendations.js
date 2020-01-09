@@ -1,8 +1,9 @@
 const express = require('express');
+const router = express.Router();
 const recommendationsData = require('../recommendationData.json')
 
-router.use('/', (req, res) => {
-
+router.get('/', (req, res) => {
+    res.send(recommendationsData);
 })
 
 

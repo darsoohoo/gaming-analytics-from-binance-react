@@ -5,9 +5,8 @@ const coins = require('./routes/coins')
 
 const app = express('');
 
-app.use(express.json( { extended: false }));
 
-const coinRates = require('./coinRates.json');
+app.use(express.json( { extended: false }));
 
 
 app.use('/coins', coins)
