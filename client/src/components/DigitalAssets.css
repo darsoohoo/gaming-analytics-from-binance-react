@@ -1,0 +1,32 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .flex-container>div{
+    align-items: center;
+    justify-content: center;
+    align-content:stretch;
+  }
+  
+  .flex-container>h4{
+    align-items: flex-start;
+    justify-content: center;
+    align-content:stretch;
+  }
+  
+  .total-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+  .digital-assets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }

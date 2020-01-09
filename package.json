@@ -1,0 +1,27 @@
+{
+  "name": "binance-api-react",
+  "version": "1.0.0",
+  "description": "binance-api-react-json",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "test",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darsoohoo/binance-api-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darsoohoo/binance-api-react/issues"
+  },
+  "homepage": "https://github.com/darsoohoo/binance-api-react#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-router": "0.0.1"
+  }
+}
