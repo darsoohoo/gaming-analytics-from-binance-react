@@ -7,9 +7,15 @@ router.get('/', (req, res) => {
 })
 
 
-router.get('/assets?sortBy=Asset&order=desc', (req, res) => {
-    res.send(recommendationsData);
-})
+// router.get('/assets?sortBy=Asset&order=desc', (req, res) => {
+//     res.send(recommendationsData);
+// })
+
+
+// router.get('/banks?sortBy=Bank&order=desc', (req, res) => {
+//     res.send(recommendationsData);
+// })
+
 
 
 

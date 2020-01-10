@@ -1,15 +1,12 @@
 const express = require('express');
-
 const recommendations = require('./routes/recommendations');
-const coins = require('./routes/coins')
+
 
 const app = express('');
 
 
 app.use(express.json( { extended: false }));
 
-
-app.use('/coins', coins)
 
 app.use('/recommendations', recommendations )
 

@@ -1,5 +1,5 @@
-export const getRecommendations = () => {
-    return fetch(`/recommendations`, {
+export const getRecommendations = (sortBy) => {
+    return fetch(`/recommendations/`, {
         method: "GET"
     })
         .then(response => {
