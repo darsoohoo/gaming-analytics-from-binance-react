@@ -7,6 +7,11 @@ router.get('/', (req, res) => {
 })
 
 
+router.get('/assets?sortBy=Asset&order=desc', (req, res) => {
+    res.send(recommendationsData);
+})
+
+
 
 
 

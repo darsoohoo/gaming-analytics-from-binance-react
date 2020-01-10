@@ -12,17 +12,17 @@ const xrpLogo = <img height="56px" width="56px" src="https://static.coingate.com
 const defaultLogo = <img src="http://www.w3.org/2000/svg" alt="default logo"/>
 
 
-class DigitalAssets extends Component {
+class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
+            recommendations: [],
             isLoaded: false,
             };
         }
 
         componentDidMount() {
-            axios.get('/coins')
+            axios.get('/recommendations')
             .then(res => {
                 console.log(res.data)
                 const results = res.data;
@@ -45,41 +45,37 @@ class DigitalAssets extends Component {
                 <section className="digital-assets">
                     <table className="mdl-data-table mdl-js-data-table mdl-button--colored" >
                         <thead>
-                            <th className="item"></th>
-                            <th className="name">Name</th>
-                            <th className="description">Description</th>
-                            <th className="price">Price</th>
-                            <th className="add">Add to cart</th>
+                            <th className="asset">Asset</th>
+                            <th className="area">Area</th>
+                            <th className="zone">Zone</th>
+                            <th className="bank">Bank</th>
+                            <th className="stand">Stand</th>
+                            <th className="netwin">Net Win</th>
+                            <th className="old-denom">Old Denom</th>
+                            <th className="new-denom">New Denom</th>
+                            <th className="old-payback-pct">Old Payback Percentage</th>
+                            <th className="new-payback-pct">New Payback Percentage</th>
+                            <th className="date">Date</th>
                         </thead>
                         <tbody>
                             {items
-                            .filter(item => item.symbol === 'BTCUSDT' || item.symbol === 'ETHUSDT' || item.symbol === 'XRPUSDT')
                             .map(item => (
                                 <tr>
-                                <td>
-                                {(() => {
-                                    switch (item.symbol) {
-                                    case "BTCUSDT":   return btcLogo;
-                                    case "ETHUSDT": return ethLogo;
-                                    case "XRPUSDT":  return xrpLogo;
-                                    default:      return defaultLogo;
-                                    }
-                                })()}
-
-
-
-
-                            </td>
-                                <td key={item.symbol}>{item.lastPrice}</td>
-                                <td>This is {item.symbol}</td>
-                                <td id="eth-price">{item.lastPrice}</td>
-                                <td><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addEthereum()" type="button">Buy</button></td>
+                                <td key={item.Asset}>{item.Asset}</td>
+                                <td>{item.Area}</td>
+                                <td>{item.Bank}</td>
+                                <td>{item.Zone}</td>
+                                <td>{item.Stand}</td>
+                                <td>{item.NetWin}</td>
+                                <td>{item.OldDenom}</td>
+                                <td>{item.NewDenom}</td>
+                                <td>{item.OldPaybackPct}</td>
+                                <td>{item.NewPaybackPct}</td>
+                                <td>{item.Date}</td>
                                 </tr>
-
                             ))}
                        </tbody>
                     </table>
-
                 </section>
             </section>
         );
@@ -88,4 +84,4 @@ class DigitalAssets extends Component {
 }
 
 
-export default DigitalAssets;
+export default Landing;
