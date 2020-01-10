@@ -25,6 +25,10 @@ export class Table extends Component {
           });
       }
 
+      onSort = sortType => {
+          this.setState({sortType});
+      }
+
 
     render() {
 
@@ -40,8 +44,11 @@ export class Table extends Component {
                         <thead>
                             <th className="asset">Asset</th>
                             <th className="action">
-                                <button>
-                                    Action
+                                <button onClick={() => this.onSort('asc')}>
+                                    Asc Action
+                                </button>
+                                <button onClick={() => this.onSort('desc')}>
+                                    Desc Action
                                 </button>
                             </th>
                             <th className="recommendation-status">
